@@ -1,3 +1,11 @@
+import os
+try:
+    import cv2
+except ImportError:
+    import os
+    os.system('pip uninstall -y opencv-python opencv-python-headless')
+    os.system('pip install opencv-python-headless')
+
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
